@@ -186,7 +186,7 @@ Try {
 		}
 
 		# <Perform Uninstallation tasks here>
-		$exitCode = Execute-Process -Path "$dirFiles\TableauReader-64bit-2020-1-0.exe" -Parameters "'/uninstall /quiet'" -WindowStyle "Hidden" -PassThru
+		$exitCode = Execute-Process -Path "$dirFiles\TableauReader-64bit-2020-1-0.exe" -Parameters "/uninstall /quiet" -WindowStyle "Hidden" -PassThru
 		If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 
 		##*===============================================
